@@ -15,6 +15,7 @@ module.exports = {
   ],
   author: "Monster",
   themeConfig: {
+    search: false,
     // 侧边栏深度2=>h3
     sidebarDepth: 3,
     // 是否展开所有标题
@@ -28,7 +29,10 @@ module.exports = {
       { text: "🚄 进阶", link: "/advance/" },
       { text: "🚀 Koa2", link: "/koa2/" },
       { text: "🛫 Express", link: "/express/" },
+      { text: "Nest", link: "/nest/" },
+      { text: "Egg", link: "/egg/" },
       { text: "🚢 其它", link: "/other/" },
+      { text: "😘 GitHub", link: "https://github.com/MonsterXiong/Node" },
     ],
 
     sidebar: {
