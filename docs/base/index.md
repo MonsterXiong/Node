@@ -98,6 +98,26 @@ Node.js 是在 2009 年诞生的
 
 这两个工具都不支持 windows，可以使用 nvm-windows
 
+```sh
+# 查看版本
+nvm list available
+
+# 下载指定node版本
+nvm install [version]
+
+# 下载最新node
+nvm intall latest
+
+# 卸载node
+nvm uninstall [version]
+
+# 设置node镜像
+nvm node_mirror https://npm.taobao.org/mirrors/node/
+
+# 设置npm镜像
+nvm node_mirror https://npm.tao.org/mirrors/npm/
+```
+
 ### Node 的 REPL
 
 什么是 REPL？
