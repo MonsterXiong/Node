@@ -1,4 +1,135 @@
-# 基础
+# Node
+
+## 概念
+
+[Node.js](https://github.com/nodejs/node) 是一个基于 V8 JavaScript 引擎的 JavaScript 运行时环境。
+
+> Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+Node.js 基于 V8 引擎来执行 JS 代码，但是不仅仅只有 V8 引擎：
+
+- V8 可以嵌入到任何 C++应用程序中，无论是 Chrome 还是 Node.js，事实上都是嵌入了 V8 引擎来执行 JS 代码。
+- 但是在 Chrome 浏览器中，还需要解析、渲染 HTML、CSS 等相关渲染引擎，另外还需要提供支持浏览器操作的 API、浏览器自己的事件循环等；
+- Node.js 中也需要一些额外的操作，比如文件系统读/写、网络 IO、加密、压缩解压文件等操作
+
+### Atwood 定律
+
+> 任何可以使用 js 来实现的应用最终都会使用 JS 实现。
+
+### 浏览器内核是什么？
+
+不同的浏览器有不同的内核组成。
+
+- Gecko
+- Trident IE4-IE11 ，Edge Blink
+- Webkit Safari
+- Blink 是 Webkit 的分支，现在用于 chrome、edge、Opera
+
+通常我们说的浏览器内核指的是浏览器的排版引擎，也成为浏览器引擎、页面渲染引擎或样板引擎
+
+**渲染引擎工作的过程**
+
+在 script 标签放入了 js 代码，所以需要执行 JS 代码，所以需要 JS 引擎，因为 JS 属于一门高级语言，高级语言要想执行，要先变成汇编语言然后再转成机器语言，CPU 再执行。JS 引擎就是这样的。
+
+在这个执行过程中 html 解析遇到了 script 标签的话
+
+- 会停止解析，而去加载和执行 js 代码。
+
+为什么不直接异步去加载执行 js 代码，而在这里停掉呢？
+
+- 因为 JS 代码可以操作我们的 DOM
+- 所以浏览器希望将 HTML 解析的 DOM 和 JS 操作之后的 DOM 放到一起来生成最终的 DOM，而不是频繁的去生成新的 DOM 树
+
+### 为什么需要 JS 引擎呢
+
+- 我们编写的 JS 不管是交给浏览器还是 Node 执行，最终都是需要被 CPU 执行的
+- CPU 只认识自己的指令集，实际上就是机器语言，才能被 CPU 所执行
+- 所以我们需要 JS 引擎来帮助我们将 JS 代码翻译成 CPU 指令来执行。
+
+**比较常见的 JS 引擎：**
+
+- SpiderMonkey：第一款 JS 引擎，由 JS 作者开发
+- Chakra：微软开发，用于 IT 浏览器
+- JavaScriptCore：WebKit 中的 JS 引擎，Apple 公司开发
+- V8：Google 开发的强大 JS 引擎，也帮助 Chrome 从众多浏览器中脱颖而出。
+
+### 内核和引擎的关系
+
+WebKit 为例，WebKit 事实上由两部分组成：
+
+- WebCode：负责 HTML 解析、布局、渲染等等相关工作。
+- JavaScriptCore：解析、执行 JS 代码
+
+小程序的架构图
+
+- 渲染层 Webview
+- 逻辑层 JSCore
+
+### Node.js 的应用场景
+
+- node 包的形式对库进行管理；
+- 作为 Web 服务器开发
+- 借助 Node.js 完成前后端渲染的同构操作
+- 编写脚本工具
+- Electron 开发桌面应用程序
+
+### Node 的安装
+
+Node.js 是在 2009 年诞生的
+
+- LTS 版本：相对稳定一些，推荐线上环境使用该版本；
+- Current 版本：最新的 Node 版本，包含很多新特性；
+
+**版本选择**
+
+- 学习可以选择 Current 版本；
+- 公司开发可以选择 LTS 版本；
+
+**安装方式**
+
+- Linux 上的 yum、dnf
+- Mac 上的 homebrew
+- 直接下载对应的安装包 window（.msi），Mac(.pkg)
+
+**Node 的版本工具**
+
+- nvm
+- n（交互式管理你的 Node.js 版本）=》（tj）
+
+这两个工具都不支持 windows，可以使用 nvm-windows
+
+### Node 的 REPL
+
+什么是 REPL？
+
+- REPL 是 Read-Eval-Print Loop 的简称，翻译为"读取-求值-输出" 循环；
+- REPL 是一个简单的、交互式的编程环境；
+
+输入 node 即可进入 Node 的 REPL
+
+## 浏览器和 Node.js 架构区别
+
+Chrome
+
+HTML/CSS JavaScript
+Blink V8
+中间层
+操作系统（网卡/硬盘/显卡。。。）
+
+Node
+
+JS
+V8
+中间层（libuv）【包括了事件循环，通过 Node BINDINGS(NODE API)链接 LIBUV】
+操作系统（网卡/硬盘/显卡。。。）
+
+单独的 Node.js 架构图
+
+- 我们编写的 JS 代码会经过 V8 引擎，再通过 Node.js 的 Bindings,将任务放到 Libuv 的事件循环中；
+- libuv(Unicorn Velociraptor-独角伶盗龙)是使用 C 语言编写的库.
+- libuv 提供了事件循环、文件系统读写、网络 IO、线程池等等内容
+
+Node.js 使用 JS、C++和 C 语言来编写的
 
 ## what
 
@@ -13,72 +144,3 @@
 - 网络请求 数据库处理 文件的读写。。。。都属于 IO 操作，阻塞的
 
 - 优点：高并发特别好
-
-## why
-
-1.防止甩锅
-
-2.能够书写 api
-
-3.了解前后端的交互流程
-
-4.全干
-
-## api 接口
-
-## js 运行环境
-
-- 浏览器
-
-  - 基本语法
-
-  - bom
-
-  - dom
-
-  - ajax
-
-  - 系统文件数据库（不能，不是语言不能，处于安全性考虑不能）
-
-- 服务器
-
-  - 基本语法
-  - 能操作数据库
-  - 能操作本地文件
-
-- 限制语言能力的不是语言本身，而是语言的运行环境（平台）
-
-## node 运行环境 REPL
-
-直接在命令行写代码
-
-\_\_dirname //当前文件的执行目录
-
-## 模块化
-
-- 内置模块（node 中提供的可以直接调用的）
-
-- 第三方模块
-
-- 自定义模块
-
-  - 创建一个模块（一个 js 文件一个模块）
-
-  - 导出一个模块（module.exports=name）
-
-  - 引用一个模块并且调用
-
-  #### 打印当前目录的目录树
-
-  1.实现的效果
-
-  2.分析功能点
-
-  - 当前目录结构
-  - 分辨是文件还是文件夹
-
-## 内置模块 FS
-
-## 内置模块 URL
-
-url:统一资源定位符

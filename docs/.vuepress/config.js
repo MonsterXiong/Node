@@ -56,7 +56,8 @@ module.exports = {
       "/nest/": [["", "简介"]],
       "/other/": [["", "其它"]],
       "/": [
-        ["base/", "认识nodejs"],
+        ["base/", "Node.js"],
+        ["base/V8", "V8"],
         ["base/application", "应用"],
         ["base/deploy", "部署"],
         ["base/lib", "库"],
