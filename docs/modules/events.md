@@ -1,7 +1,5 @@
 # events
 
-事件总线
-
 Node 中的核心 API 都是基于异步事件驱动的:
 
 - 在这个体系中,某个对象(发射器(Emitters))发出某一个事件;
@@ -13,7 +11,7 @@ Node 中的核心 API 都是基于异步事件驱动的:
 - emitter.off(eventName,listener):移除事件监听,也可以使用 removeListener;
 - emitter.emit(eventName[,...args]):发出事件,可以携带一些参数;
 
-##　 events 的基础方法
+## events 的基础方法
 
 ```js
 const EventEmitter = require("events");
