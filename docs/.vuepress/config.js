@@ -38,7 +38,9 @@ module.exports = {
     sidebar: {
       "/modules/": [
         ["", "简介"],
-        ["fs", "文件系统fs"],
+        ["path", "路径"],
+        ["process", "进程"],
+        ["fs", "文件系统"],
         ["http", "网络http"],
       ],
       "/advance/": [
