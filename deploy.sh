@@ -1,25 +1,20 @@
-#!/usr/bin/env sh
+# Prepare
+cd docs
+rm -rf .vuepress/dist
 
-# 确保脚本抛出遇到的错误
-set -e
+# Build
+vuepress build
 
-# 生成静态文件
-npm run docs:build
-
-# 进入生成的文件夹
-cd docs/.vuepress/dist
-
-# 如果是发布到自定义域名
-# echo 'blog.monsterbear.top' > CNAME
-
+# Publish to GitHub Pages
+cd .vuepress/dist
 git init
+git config user.name "MonsterXiong"
+git config user.email "942849672@qq.com"
 git add -A
-git commit -m 'deploy'
+git commit -m "deploy"
+git push --force "https://${TOKEN}@github.com/MonsterXiong/Node.git" "master:gh-pages"
 
-# 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+# Cleanup
+cd ../..
+rm -rf .vuepress/dist
 
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/MonsterXiong/Node.git master:gh-pages
-
-cd -
