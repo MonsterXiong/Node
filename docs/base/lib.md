@@ -7,7 +7,6 @@
 ## 常用的库
 
 - node-dev
-- pm2
 - forever
 - cross-env
 - browserify

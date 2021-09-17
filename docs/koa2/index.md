@@ -35,3 +35,39 @@ Middleware => 深入理解洋葱模型 => 中间件，也是洋葱模型的核�
 > next：每一个中间件都会通过 next 来执行下一个中间件
 >
 > middleware(xtx,next)
+
+```sh
+# 使用koa-generator快速搭建Koa项目，-e使用ejs引擎
+npx -p koa-generator koa2 -e project
+
+# 连接数据库
+npm i mysql2 sequelize --save
+```
+
+```js
+// sequelize.js
+const Sequelize = require("sequelize");
+
+const options = {
+  database:'monster'
+  username:'root',
+  password:'123456',
+  port:3306,
+  host:'localhost',
+  dialect: "mysql",
+};
+
+const sequelize = new Sequelize(options);
+
+module.exports = sequelize;
+
+// 测试
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("auth ok");
+  })
+  .catch(() => {
+    console.log("auth err");
+  });
+```

@@ -27,7 +27,7 @@ module.exports = {
       { text: "🏃 基础", link: "/base/" },
       { text: "🚗 内置模块", link: "/modules/" },
       { text: "🚄 进阶", link: "/advance/" },
-      { text: "🚀 Koa2", link: "/koa2/" },
+      { text: "🚀 Koa2解密", link: "/koa2/" },
       { text: "🛫 Express", link: "/express/" },
       { text: "Nest", link: "/nest/" },
       { text: "Egg", link: "/egg/" },
