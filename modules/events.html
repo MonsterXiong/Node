@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>events | Node Note</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/Node/assets/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="Node Note">
+    
+    <link rel="preload" href="/Node/assets/css/0.styles.271287b7.css" as="style"><link rel="preload" href="/Node/assets/js/app.7610ec33.js" as="script"><link rel="preload" href="/Node/assets/js/2.b6a62b60.js" as="script"><link rel="preload" href="/Node/assets/js/26.80824d42.js" as="script"><link rel="prefetch" href="/Node/assets/js/10.d6d5e694.js"><link rel="prefetch" href="/Node/assets/js/11.62c9ee39.js"><link rel="prefetch" href="/Node/assets/js/12.913a2399.js"><link rel="prefetch" href="/Node/assets/js/13.e14a2a24.js"><link rel="prefetch" href="/Node/assets/js/14.8d03f2f6.js"><link rel="prefetch" href="/Node/assets/js/15.09afaa40.js"><link rel="prefetch" href="/Node/assets/js/16.144329bc.js"><link rel="prefetch" href="/Node/assets/js/17.451bf273.js"><link rel="prefetch" href="/Node/assets/js/18.50d174db.js"><link rel="prefetch" href="/Node/assets/js/19.86462bea.js"><link rel="prefetch" href="/Node/assets/js/20.749d3a5f.js"><link rel="prefetch" href="/Node/assets/js/21.666325de.js"><link rel="prefetch" href="/Node/assets/js/22.3fc3dc2e.js"><link rel="prefetch" href="/Node/assets/js/23.48f01235.js"><link rel="prefetch" href="/Node/assets/js/24.03e127ea.js"><link rel="prefetch" href="/Node/assets/js/25.5780fa83.js"><link rel="prefetch" href="/Node/assets/js/27.8f3d6d79.js"><link rel="prefetch" href="/Node/assets/js/28.ae79e648.js"><link rel="prefetch" href="/Node/assets/js/29.bd46e497.js"><link rel="prefetch" href="/Node/assets/js/3.13c439d3.js"><link rel="prefetch" href="/Node/assets/js/30.2c681567.js"><link rel="prefetch" href="/Node/assets/js/31.ebd9806d.js"><link rel="prefetch" href="/Node/assets/js/32.c42210d5.js"><link rel="prefetch" href="/Node/assets/js/33.88580e82.js"><link rel="prefetch" href="/Node/assets/js/4.068c0638.js"><link rel="prefetch" href="/Node/assets/js/5.2183ad7c.js"><link rel="prefetch" href="/Node/assets/js/6.c9e328b2.js"><link rel="prefetch" href="/Node/assets/js/7.5c8491f1.js"><link rel="prefetch" href="/Node/assets/js/8.2032dafa.js"><link rel="prefetch" href="/Node/assets/js/9.d976b2b9.js">
+    <link rel="stylesheet" href="/Node/assets/css/0.styles.271287b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Node/" class="home-link router-link-active"><!----> <span class="site-name">Node Note</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Node/base/" class="nav-link">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link router-link-active">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" class="nav-link">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Node/base/" class="nav-link">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link router-link-active">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" class="nav-link">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Node/modules/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Node/modules/path.html" class="sidebar-link">路径</a></li><li><a href="/Node/modules/process.html" class="sidebar-link">进程</a></li><li><a href="/Node/modules/fs.html" class="sidebar-link">文件系统</a></li><li><a href="/Node/modules/http.html" class="sidebar-link">网络http</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="events"><a href="#events" class="header-anchor">#</a> events</h1> <p>Node 中的核心 API 都是基于异步事件驱动的:</p> <ul><li>在这个体系中,某个对象(发射器(Emitters))发出某一个事件;</li> <li>我们可以监听这个事件(监听器 Listeners),并且传入的回调函数,这个回调函数会在监听到事件时调用;</li></ul> <p>发出事件和监听事件都是通过 EventEmitter 类来完成的,他们都属于 events 对象.</p> <ul><li>emitter.on(eventName,listener):监听事件,也可以使用 addListener;</li> <li>emitter.off(eventName,listener):移除事件监听,也可以使用 removeListener;</li> <li>emitter.emit(eventName[,...args]):发出事件,可以携带一些参数;</li></ul> <h2 id="events-的基础方法"><a href="#events-的基础方法" class="header-anchor">#</a> events 的基础方法</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> EventEmitter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;events&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 1. 创建发射器</span>
+<span class="token keyword">const</span> emitter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2. 监听某一个事件</span>
+<span class="token comment">// on:</span>
+<span class="token comment">// (出现得比较早)on alias addListener:</span>
+emitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;click1&quot;</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">linstener</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;click2&quot;</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+emitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> linstener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+emitter<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;click3&quot;</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. 发出一个事件</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  emitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> a<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  emitter<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> linstener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  emitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> b<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="events-获取信息"><a href="#events-获取信息" class="header-anchor">#</a> events 获取信息</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> EventEmitter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;events&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> emitter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+emitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">listener</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;click2&quot;</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+emitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+emitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;add&quot;</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+emitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;tap&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;tap&quot;</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 1. 获取注册的事件</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>emitter<span class="token punctuation">.</span><span class="token function">eventNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2. 获取函数个数</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>emitter<span class="token punctuation">.</span><span class="token function">listenerCount</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3.获取注册事件的函数</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>emitter<span class="token punctuation">.</span><span class="token function">listeners</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="events-不常用的方法"><a href="#events-不常用的方法" class="header-anchor">#</a> events 不常用的方法</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 只监听一次</span>
+emitter<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 将本次监听放到最前面</span>
+emitter<span class="token punctuation">.</span><span class="token function">prependListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//  放到最前面且只用一次</span>
+emitter<span class="token punctuation">.</span><span class="token function">prependOnceListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 不传参的话,移除所有监听器,传参的话,移除该类的所有监听器</span>
+emitter<span class="token punctuation">.</span><span class="token function">removeAllListeners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/Node/assets/js/app.7610ec33.js" defer></script><script src="/Node/assets/js/2.b6a62b60.js" defer></script><script src="/Node/assets/js/26.80824d42.js" defer></script>
+  </body>
+</html>

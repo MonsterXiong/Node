@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>模块化 | Node Note</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/Node/assets/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="Node Note">
+    
+    <link rel="preload" href="/Node/assets/css/0.styles.271287b7.css" as="style"><link rel="preload" href="/Node/assets/js/app.7610ec33.js" as="script"><link rel="preload" href="/Node/assets/js/2.b6a62b60.js" as="script"><link rel="preload" href="/Node/assets/js/19.86462bea.js" as="script"><link rel="prefetch" href="/Node/assets/js/10.d6d5e694.js"><link rel="prefetch" href="/Node/assets/js/11.62c9ee39.js"><link rel="prefetch" href="/Node/assets/js/12.913a2399.js"><link rel="prefetch" href="/Node/assets/js/13.e14a2a24.js"><link rel="prefetch" href="/Node/assets/js/14.8d03f2f6.js"><link rel="prefetch" href="/Node/assets/js/15.09afaa40.js"><link rel="prefetch" href="/Node/assets/js/16.144329bc.js"><link rel="prefetch" href="/Node/assets/js/17.451bf273.js"><link rel="prefetch" href="/Node/assets/js/18.50d174db.js"><link rel="prefetch" href="/Node/assets/js/20.749d3a5f.js"><link rel="prefetch" href="/Node/assets/js/21.666325de.js"><link rel="prefetch" href="/Node/assets/js/22.3fc3dc2e.js"><link rel="prefetch" href="/Node/assets/js/23.48f01235.js"><link rel="prefetch" href="/Node/assets/js/24.03e127ea.js"><link rel="prefetch" href="/Node/assets/js/25.5780fa83.js"><link rel="prefetch" href="/Node/assets/js/26.80824d42.js"><link rel="prefetch" href="/Node/assets/js/27.8f3d6d79.js"><link rel="prefetch" href="/Node/assets/js/28.ae79e648.js"><link rel="prefetch" href="/Node/assets/js/29.bd46e497.js"><link rel="prefetch" href="/Node/assets/js/3.13c439d3.js"><link rel="prefetch" href="/Node/assets/js/30.2c681567.js"><link rel="prefetch" href="/Node/assets/js/31.ebd9806d.js"><link rel="prefetch" href="/Node/assets/js/32.c42210d5.js"><link rel="prefetch" href="/Node/assets/js/33.88580e82.js"><link rel="prefetch" href="/Node/assets/js/4.068c0638.js"><link rel="prefetch" href="/Node/assets/js/5.2183ad7c.js"><link rel="prefetch" href="/Node/assets/js/6.c9e328b2.js"><link rel="prefetch" href="/Node/assets/js/7.5c8491f1.js"><link rel="prefetch" href="/Node/assets/js/8.2032dafa.js"><link rel="prefetch" href="/Node/assets/js/9.d976b2b9.js">
+    <link rel="stylesheet" href="/Node/assets/css/0.styles.271287b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Node/" class="home-link router-link-active"><!----> <span class="site-name">Node Note</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Node/base/" class="nav-link router-link-active">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" class="nav-link">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Node/base/" class="nav-link router-link-active">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" class="nav-link">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Node/base/" aria-current="page" class="sidebar-link">Node.js</a></li><li><a href="/Node/base/module.html" aria-current="page" class="active sidebar-link">模块化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/base/module.html#早期的-js" class="sidebar-link">早期的 JS</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#没有模块化带来的问题" class="sidebar-link">没有模块化带来的问题</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#commonjs" class="sidebar-link">CommonJS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/base/module.html#案例" class="sidebar-link">案例</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#理解对象的引用赋值" class="sidebar-link">理解对象的引用赋值</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#画图解析赋值的过程" class="sidebar-link">画图解析赋值的过程</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#exports-导出" class="sidebar-link">exports 导出</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#module-exports-是什么" class="sidebar-link">module.exports 是什么?</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#require-细节" class="sidebar-link">require 细节</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#模块的加载过程" class="sidebar-link">模块的加载过程</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#commonjs-的加载过程" class="sidebar-link">CommonJS 的加载过程</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#node-源码解析" class="sidebar-link">Node 源码解析</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#commonjs-规范缺点" class="sidebar-link">CommonJS 规范缺点</a></li></ul></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#amd-规范" class="sidebar-link">AMD 规范</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#cmd-规范" class="sidebar-link">CMD 规范</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#es-module" class="sidebar-link">ES Module</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/base/module.html#export-和-import-结合使用" class="sidebar-link">export 和 import 结合使用</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#default-用法" class="sidebar-link">default 用法</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#import-函数" class="sidebar-link">import 函数</a></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#es-module-加载过程" class="sidebar-link">ES Module 加载过程</a></li></ul></li><li class="sidebar-sub-header"><a href="/Node/base/module.html#node-对-es-module-的支持" class="sidebar-link">Node 对 ES Module 的支持</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/base/module.html#commanjs-和-es-module-交互" class="sidebar-link">CommanJS 和 ES Module 交互</a></li></ul></li></ul></li><li><a href="/Node/base/V8.html" class="sidebar-link">V8</a></li><li><a href="/Node/base/application.html" class="sidebar-link">应用</a></li><li><a href="/Node/base/lib.html" class="sidebar-link">库</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="模块化"><a href="#模块化" class="header-anchor">#</a> 模块化</h1> <p><strong>什么是模块化呢？</strong></p> <ul><li>模块化开发的最终的目的是将程序分成一个个小的模块</li> <li>这个模块中编写属于自己的逻辑代码，有自己的作用域，不会影响到其他的模块；</li> <li>这个模块可以将自己希望的变量、函数、对象等导出给其它模块使用</li> <li>也可以通过某种方式，导入另外模块的变量、函数、对象等；</li></ul> <p>按照这种模块划分开发程序的过程，就是模块化开发的过程；</p> <p>JS 的缺陷：</p> <ul><li>var 定义的变量作用域问题；</li> <li>JS 的面向对象并不能像常规面向对象语言一样使用 class；(借鉴 Self 语言的)</li> <li>JS 没有模块化的问题等等；</li></ul> <div class="custom-block tip"><p class="custom-block-title">题外话</p> <p>JS 被称之为是披着 C 语言外衣的 Lisp（这门语言被应用在人工智能领域），Lisp 被称为天才程序员使用的语言。《黑客与画家》</p></div> <h2 id="早期的-js"><a href="#早期的-js" class="header-anchor">#</a> 早期的 JS</h2> <ul><li><p>JS 仅仅作为一门脚本语言，做一些简单的表单验证或动画实现</p></li> <li><p>随着前端和 JS 的快速发展，JS 代码变得越来越复杂了</p> <ul><li>ajax 的出现，前后端开发分离，意味着后端返回数据，我们需要通过 JS 进行前端页面的渲染</li> <li>SPA 的出现，前端页面变得更加复杂：包括前端路由、状态管理等等一些列复杂的需求需要通过 JS 来实现</li> <li>包括 Node 的实现，JS 编写复杂的后端程序，没有模块化是致命的硬伤。</li></ul></li> <li><p>模块化是一个迫切的需求：</p> <ul><li>但是 JS 本身直到 ES6 才推出自己的模块化方案</li> <li>在此之前，为了让 JS 支持模块化，涌现出了很多不同的模块化规范：AMD、CMD、CommonJS 等</li></ul></li></ul> <h2 id="没有模块化带来的问题"><a href="#没有模块化带来的问题" class="header-anchor">#</a> 没有模块化带来的问题</h2> <ul><li>命名冲突</li></ul> <p>可以用 IIFE（立即函数调用表达式）解决,函数是有作用域的。立即执行函数，但是其它就访问不到了，所以需要在立即执行函数中 return 出来</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> module <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">&quot;Moonster&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">,</span>
+    age<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li><p>带来了新的问题</p> <ol><li>我们必须记得每一个模块中返回对象的命名，才能在其它模块中正确的使用</li> <li>代码写起来混乱不堪，每个文件中的代码都需要包裹在一个匿名函数中来编写</li> <li>在没有合适的规范情况下，可能会出现任意命名甚至出现模块名称相同的情况</li></ol></li> <li><p>虽然实现了模块化，但是实现过于简单，并且是没有规范的</p> <ol><li>制定规范约束每个人都按照这个规范去编写模块化的代码；</li> <li>这个规范包括的核心功能：<strong>模块本身可以导出暴露的属性，模块又可以导入自己需要的属性</strong>；</li></ol></li></ul> <p>JS 社区涌出了很多规范，例如 AMD、CMD、CommonJS 都是代表性的一些规范。</p> <h2 id="commonjs"><a href="#commonjs" class="header-anchor">#</a> CommonJS</h2> <p>CommonJS 是一个规范，最初提出来是在浏览器以外的地方使用，并且当时被命名为 ServerJS,后来为了体现它的广泛性，修改为 CommonJS,平时我们会简称为 CJS。</p> <ul><li>Node 是 CommonJS 在服务器端一个具有代表性的实现；</li> <li>Browserify 是 CommonJS 在浏览器中的一种实现</li> <li>Webpack 打包工具具备对 CommonJS 的支持和转换；</li></ul> <p>所以 Node 中对 CommonJS 进行了支持和实现，让我们在开发 node 的过程中可以方便的进行模块化开发；</p> <ul><li>在 Node 中每一个 JS 文件都是一个单独的模块；</li> <li>在这个模块中包括 CommonJS 规范的核心变量：exports、module.exports、require</li></ul> <p>模块化的核心是导出和导入，Node 对其进行了实现：</p> <ul><li>exports 和 module.exports 可以负责对模块中的内容进行导出；</li> <li>require 函数可以帮助我们导入其他模块（自定义模块、系统模块、第三方库模块）中的内容</li></ul> <h3 id="案例"><a href="#案例" class="header-anchor">#</a> 案例</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// bar.js</span>
+<span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">&quot;Monster&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token comment">// require本质就是返回exports对象</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="理解对象的引用赋值"><a href="#理解对象的引用赋值" class="header-anchor">#</a> 理解对象的引用赋值</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;why&quot;</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> info <span class="token operator">=</span> obj<span class="token punctuation">;</span>
+</code></pre></div><p>首先呢，在内存分配一块空间，基础类型的话就直接保存了，但是对象是一个引用类型，会在堆内存开辟一块空间</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 这块堆内存会有一个自己的内存地址，例如0x100</span>
+<span class="token punctuation">{</span>
+    name<span class="token operator">:</span><span class="token string">&quot;why&quot;</span><span class="token punctuation">,</span>
+    age<span class="token operator">:</span><span class="token number">18</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 当我们把对象赋值给obj的,在内存中保存obj=0x100,obj保存的是内存地址,也就是我的这个引用指向这个内存地址</span>
+<span class="token comment">// info = obj实际上就是把内存地址赋给了info,也就是,info = 0x100,内存地址的引用</span>
+</code></pre></div><h3 id="画图解析赋值的过程"><a href="#画图解析赋值的过程" class="header-anchor">#</a> 画图解析赋值的过程</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// bar.js</span>
+<span class="token comment">// 每个模块都有一个exports对象,它默认指向空对象,只要是个对象就会在内存里面开辟一块空间</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>exports<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./bar.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 想办法拿到bar.js的那块内存空间,也就代表bar指向的是bar.js的那个内存地址</span>
+</code></pre></div><p>所以 Node 中 CommonJS 的本质就是对象的引用赋值.</p> <p><strong>它们实际上是一个浅层拷贝</strong></p> <p>bar 和 exports 是同一个对象</p> <ul><li>所以 bar 对象是 exports 对象的浅拷贝(引用赋值)</li> <li>浅拷贝的本质就是一种引用的赋值而已</li></ul> <h3 id="exports-导出"><a href="#exports-导出" class="header-anchor">#</a> exports 导出</h3> <ul><li>注意 exports 是一个对象,我们可以在这个对象中添加很多个属性,添加的属性会导出</li> <li>另外一个文件可以通过 require 导入</li></ul> <p>意味着 main 中的 bar 变量等于 exports 对象</p> <p>也就是 require 通过各种查找方式,最终找到了 exports 这个对象</p> <p>并且将这个 exports 对象赋值给了 bar 变量</p> <p>bar 变量就是 exports 对象了</p> <h3 id="module-exports-是什么"><a href="#module-exports-是什么" class="header-anchor">#</a> module.exports 是什么?</h3> <p>module.exports 和 exportsu 有什么关系或者区别呢?</p> <p>追根溯源,维基百科对 CommonJS 规范的解析:</p> <ul><li>CommonJS 中是没有 module.exports 的概念的</li> <li>但是为了实现模块的导出,Node 中使用的是 Module 的类,每一个模块都是 Module 的一个实例,也就是 module;</li> <li>所以在 Node 中真正用于导出的其实根本不是 exports,而是 module.exports;</li> <li>因为 module 才是导出的真正实现者</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 因为源码中做了一件事情</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> exports<span class="token punctuation">;</span>
+<span class="token comment">// module.exports = exports 是在顶层</span>
+<span class="token comment">// exports = &quot;123&quot;</span>
+<span class="token comment">// 导出的就还是{}</span>
+</code></pre></div><p>为什么 exports 也可以导出呢?</p> <p>是因为 module 对象的 exports 属性是 exports 对象的一个引用;</p> <p><strong>最终的目的都是让他们两个指向同一个对象</strong></p> <p>也就是说 module.exports=exports=main 中的 bar</p> <p>本质上,是 module.exports 在导出,实质上 module.exportsexports、和 require 指向的是同一个内存地址</p> <p>module.exports 不在引用 exports 的时候,exports 就没有任何意义了</p> <p>exports 的意义是 commonjs 中要求有一个 exports 作为导出(接口和实现类的区别)</p> <p>的</p> <p><strong>理解值拷贝和引用拷贝的时候,内存的关系</strong></p> <h3 id="require-细节"><a href="#require-细节" class="header-anchor">#</a> require 细节</h3> <p>require 是一个函数,可以帮助我们引入一个文件(模块)中导入的对象.</p> <p><a href="https://nodejs.org/dist/latest-v14.x/docs/api/modules.html#modules_all_together" target="_blank" rel="noopener noreferrer">require 的查找规则<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>总结:</strong></p> <p>导入的语法为 require(X)</p> <ul><li>情况一:X 是一个核心模块,比如 path、http
+<ul><li>直接返回核心模块,并且停止查找</li></ul></li> <li>情况二:X 是以./或../或/(根目录)开头的
+<ul><li>第一步将 X 当作一个文件在对应的目录下查找
+<ul><li>如果有后缀名,按照后缀名的格式查找对应的文件</li> <li>如果没有后缀名,就会按照如下顺序:
+<ol><li>直接查找文件 X</li> <li>查找 X.js 文件</li> <li>查找 X.json 文件</li> <li>查找 X.node 文件</li></ol></li></ul></li> <li>第二步:没有找到对应的文件,将 X 作为一个目录
+<ul><li>查找目录下面的 index 文件
+<ol><li>查找 X/index.js 文件</li> <li>查找 X/index.json 文件</li> <li>查找 X/index.node 文件</li></ol></li></ul></li> <li>如果没有找到,那么报错:not found</li></ul></li> <li>情况三:直接是一个 X(没有路径),并且 X 不是一个核心模块
+<ul><li>会去当前文件所在的目录的 node_modules 去查找,没有的话就回去上一层目录的 node_modules 查找,一直找到根目录的 node_modules,如果没找到,那就会报错:not found</li></ul></li></ul> <blockquote><p>在每一个模块都有一个 module 对象,当前就是 id 就是一个<code>.</code>,如果是其它的就不是一个<code>.</code>了,loader,parent,chileren,exports,paths(paths 查找顺序)</p></blockquote> <h3 id="模块的加载过程"><a href="#模块的加载过程" class="header-anchor">#</a> 模块的加载过程</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// es module 与commonjs的区别</span>
+<span class="token comment">// 加载过程是同步加载的</span>
+<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 阻塞了,不会浪费特别多的性能,是开发服务器的,文件都是在本地的,所以读取效率很快</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;main被执行了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 但是那么放到浏览器上就比较麻烦了,因为它要先从服务器上面下载下来,所以会很明显的有阻塞</span>
+<span class="token comment">// 如果模块被多次加载是会被缓存的</span>
+</code></pre></div><ol><li>结论一:模块在被第一次引入时,模块中的 JS 代码会被运行一次</li> <li>结论二:模块被多次引入时,会缓存,最终只加载(运行)一次
+<ul><li>为什么只会被加载运行一次呢?</li> <li>这是因为每个模块对象 module 都有一个 loaded 属性</li> <li>为 false 表示还没有加载,为 true 表示已经加载.</li></ul></li> <li>结论三:如果有循环引入,那么加载顺序是什么?
+<ul><li>main=&gt;(aaa)=&gt;ccc=&gt;ddd=&gt;eee</li> <li>main=&gt;(bbb)=&gt;ccc</li> <li>bbb=&gt;eee</li> <li>这是一种数据结构:图结构</li> <li>图结构在遍历的过程中,有深度优先搜索(DFS,depth first search)和广度优先搜索(BFS,breadth first search);</li> <li>Node 采用的是深度优先算法:main-&gt;aaa-&gt;ccc-&gt;ddd-&gt;eee-&gt;bbb</li></ul></li></ol> <p>图结构(互联网也是图结构,把每个节点访问的过程叫图的遍历) 数组 链表 树结构 哈希表</p> <h3 id="commonjs-的加载过程"><a href="#commonjs-的加载过程" class="header-anchor">#</a> CommonJS 的加载过程</h3> <p>CommonJS 模块加载 js 文件的过程是运行时加载的，并且是同步的：</p> <ul><li>运行时加载意味着是 JS 引擎在执行 js 代码的过程中加载模块；</li> <li>同步就意味着一个文件没有加载结束之前，后面的代码都不会执行；</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./foo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;if语句继续执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>CommonJS 通过 module.exports 导出的是一个对象</p> <ul><li>导出的一个对象意味着可以将这个对象的引用在其他模块中赋值给其他变量；</li> <li>但是最终他们指向的都是同一个对象，那么一个变量修改了对象的属性，所有的地方都会被修改。</li></ul> <h3 id="node-源码解析"><a href="#node-源码解析" class="header-anchor">#</a> Node 源码解析</h3> <p>源码在<code>lib/internal/modules/cjs</code></p> <p>是把对应的代码放到一个沙盒去执行的,类似于 IIFE,因为函数是有自己的作用域的</p> <h3 id="commonjs-规范缺点"><a href="#commonjs-规范缺点" class="header-anchor">#</a> CommonJS 规范缺点</h3> <p>CommonJS 加载模块是同步的:</p> <ul><li>同步意味着只有等到对应模块加载完毕,当前模块中的内容才能被运行;</li> <li>这个在服务器不会有什么问题,因为服务器加载的 js 文件都是本地文件,加载速度非常快</li></ul> <p>如果将它应用于浏览器呢?</p> <ul><li>浏览器加载 js 文件需要先从服务器将文件下载下来,之后再加载运行;</li> <li>那么采用同步就意味着后续的 js 代码都无法正常运行,即使是一些简单的 DOM 操作;</li></ul> <p>所以再浏览器中,我们通常不使用 CommonJS 规范</p> <ul><li>当然再 webpack 中使用 CommonJS 是另外一回事</li> <li>因为它会将我们的代码转成浏览器可以直接执行的代码;</li></ul> <p>在早期为了可以再浏览器中使用模块化,通常会采用 AMD 或 CMD;</p> <ul><li>但是目前一方面现代的浏览器已经支持 ES Modules,另一方面借助于 webpack 等工具可以对 CommonJS 或者 ES Module 代码的转换;</li> <li>ADM 和 CMD 已经使用非常少了</li></ul> <p>vite 编译速度非常快,因为压根就不编译,而是直接浏览器去加载,但是在打包的时候还是需要去转换成为浏览器能够识别的 ES5 的语法</p> <h2 id="amd-规范"><a href="#amd-规范" class="header-anchor">#</a> AMD 规范</h2> <p>AMD 是应用于浏览器的一种模块化规范:</p> <ul><li>AMD 是 Asynchronous Module Definition(异步模块)的缩写</li> <li>它采用的是异步加载模块;</li> <li>事实上 AMD 的规范还要早已 CommonJS,但是 CommonJS 目前仍然在被使用,而 AMD 使用的较少了</li></ul> <p>规范只是定义代码的时候应该如何去编写,只有有了具体的实现才能被应用:</p> <ul><li>AMD 实现的比较常用的库是 <a href="https://github.com/requirejs/requirejs" target="_blank" rel="noopener noreferrer">require.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 和 curl.js</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 第一步:下载require.js</span>
+<span class="token comment"># 下载地址:https//github.com/requirejs/requirejs</span>
+<span class="token comment"># 找到其中的require.js文件</span>
+<span class="token comment"># 第二步:定义HTML的script标签引入require.js和定义入口文件</span>
+<span class="token comment"># data-main属性的作用就是在加载完src的文件后会加载执行该文件,作为入口文件</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./lib/require.js<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-main</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./index.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// require做一个配置</span>
+  require<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    paths<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 模块的映射关系,不要加后缀名</span>
+      foo<span class="token operator">:</span> <span class="token string">&quot;./foo&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 导入模块</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;foo&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">foo</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// foo.js</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">&quot;monster&quot;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="cmd-规范"><a href="#cmd-规范" class="header-anchor">#</a> CMD 规范</h2> <p>CMD 是应用于浏览器的一种模块化规范</p> <ul><li>CMD 是 Common Module Definition(通用模块定义)的编写;</li> <li>它也是采用了异步加载模块,但是它将 CommonJS 的优点吸收了过来</li></ul> <p>CMD 比较优秀的实现方案:</p> <ul><li><a href="https://github.com/seajs/seajs" target="_blank" rel="noopener noreferrer">SeaJS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 第一步下载SeaJS</span>
+<span class="token comment"># 下载地址:https://github.com/seajs/seajs</span>
+<span class="token comment"># 找到dist文件夹下的sea.js</span>
+<span class="token comment"># 第二步:引入sea.js和使用主入口文件</span>
+<span class="token comment"># seajs是指定主入口文件的</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// foo.js</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">&quot;Monster hello&quot;</span><span class="token punctuation">;</span>
+  exports<span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./foo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./lib/sea.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  seajs<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">&quot;./src/index.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="es-module"><a href="#es-module" class="header-anchor">#</a> ES Module</h2> <p>JS 没有模块化一直是它的痛点，所以才会产生我们前面学习的社区规范：CommonJS、AMD、CMD 等，后来 ES 推出了自己的模块化系统。</p> <p>ES Module 和 CommonJS 的模块化有一些不同之处：</p> <ul><li>一方面它使用了 import 和 export 关键字</li> <li>另一方面它采用编译期的静态分析，并且也加入了动态引用的方式：</li></ul> <p>ES Module 模块采用 export 和 import 关键字来实现模块化：</p> <ul><li>export 负责将模块内的内容导出；</li> <li>import 负责从其他模块导入内容；</li></ul> <p>采用 ES Module 将自动采用严格模式：use strict</p> <p>在浏览器中使用 ESM 时，它不支持 file 格式，可以起一个 live server 服务，去使用</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 导出方式有三种</span>
+
+<span class="token comment"># 导出方式一：在前面加入export</span>
+
+<span class="token comment"># 导出方式二：export {} 这个{放置我们要导出的引用列表}是大括号不是一个对象，是一个语法</span>
+
+<span class="token comment"># 导出方式三：export {name as fName},导出时，可以给变量起名</span>
+
+
+<span class="token comment"># 导入方式有三种</span>
+
+<span class="token comment"># 方式一：{}不是对象,js必须要加，脚手架帮我们做了</span>
+<span class="token comment"># import {} from './foo.js'</span>
+<span class="token comment"># 方式二：导出变量之后可以起别名</span>
+
+<span class="token comment"># import {name as fName } from './foo.js'</span>
+<span class="token comment"># 方式三：* as foo,统一放到foo对象，作为它的属性</span>
+
+</code></pre></div><h3 id="export-和-import-结合使用"><a href="#export-和-import-结合使用" class="header-anchor">#</a> export 和 import 结合使用</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// import { name, age } from &quot;./foo.js&quot;;</span>
+<span class="token comment">// export { name, age };</span>
+
+<span class="token comment">// 上面两步转为下面这一步</span>
+<span class="token comment">// export {name,age} from &quot;./foo.js&quot;;</span>
+</code></pre></div><p>为什么要这样做呢？</p> <ul><li>在开发和封装一个功能库时，通常我们希望将暴露的所有接口放到一个文件中</li> <li>这样方便指定统一的接口规范，也方便阅读</li> <li>这个时候就可以使用 export 和 import 结合使用</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 例如utils.js里面有三个工具函数，format有两个工具函数</span>
+
+<span class="token comment">// 我们可以创建index.js文件直接export { } from '' 导出</span>
+</code></pre></div><h3 id="default-用法"><a href="#default-用法" class="header-anchor">#</a> default 用法</h3> <p>前面学习的导出功能都是有名字的导出（name exports）</p> <ul><li>在导出 export 时指定了名字</li> <li>导入 import 时需要知道具体的名字</li></ul> <p>缺陷：必须知道名字</p> <p>还有一种导出叫做默认导出（default export）</p> <ul><li>默认导出 export 时可以不需要指定名字。</li> <li>在导入时不需要使用{}，并且可以自己来指定名字。</li> <li>它也方便我们和现有的 CommonJS 等规范相互操作。</li></ul> <p>注意：在一个模块中，只能有一个默认导出（default export）</p> <h3 id="import-函数"><a href="#import-函数" class="header-anchor">#</a> import 函数</h3> <p>通过 import 加载一个模块，是不可以在其放到逻辑代码中的。</p> <p>为什么会出现这个情况呢？</p> <ul><li>这是因为 ES Module 在被 JS 引擎解析时，就必须知道它的依赖关系；（parsing 只是解析没有执行的，会转成 ast,但是在解析就会语法分析出来语法错误，parsing 时就已经确定了依赖关系，cjs 的 require 是执行一个函数，它可以直接使用动态加载，但是纯 ESM 是不行的，所以解析阶段就会报出问题，所以只能使用 import()函数，import 函数是一种异步加载的，返回的是一个 promise,promise 是一个契约，承诺）</li> <li>由于这个时候 js 代码没有任何的运行，所以无法在进行类似于 if 判断中根据代码的执行情况</li></ul> <p>但是在某些情况下我们确实希望给动态的加载一个模块：</p> <ul><li>如果根据不同的条件，动态的选择加载模块的路径；</li> <li>这个时候需要使用 import()函数来动态加载;</li></ul> <p>大部分的脚手架都是基于 webpack，会对 import()单独打包到一个 js 文件，到时候就不需要加载一个特别大的 js 文件了，需要用到的时候再去加载 js 文件。</p> <h3 id="es-module-加载过程"><a href="#es-module-加载过程" class="header-anchor">#</a> ES Module 加载过程</h3> <p>ES Module 加载 js 文件的过程是编译（解析）时加载的，并且是异步的：</p> <ul><li>编译时（解析）加载，意味着 import 不能和运行时相关的内容放在一起使用：</li> <li>比如 from 后面的路径需要动态获取；</li> <li>比如不能将 import 放到 if 等语句块中</li> <li>所以有时候我们也称 ES Module 是静态解析的，而不是动态或者运行时解析的；</li></ul> <p>可以在 html 中的 script 标签进行测试异步的，相当于有个 async 属性</p> <p>异步意味着：JS 引擎在遇到 import 时会去获取这个 js 文件，但是这个获取的过程是异步的，并不会阻塞主线程继续执行；</p> <ul><li>也就是说我们设置了 type=module 的代码，相当于在 script 标签上也加上了 async 属性</li> <li>如果我们后面有普通的 script 标签以及对应的代码，那么 ES Module 对应的 js 文件和代码不会阻塞他们的执行。</li></ul> <p>ES Module 通过 export 导出的是变量本身的引用：</p> <ul><li>export 在导出一个变量时，JS 引擎会解析这个语法，并且创建模块环境记录（module environment record）;</li> <li>模块环境记录会和变量进行绑定（bindings）,并且这个绑定是实时的；</li> <li>而在导入的地方，我们是可以实时的获取到绑定的最新值的；</li></ul> <p>所以，如果在导出的模块中修改了变化，那么导入的地方可以实时获取最新的变量；</p> <p>注意：在导入的地方不可以修改该变量，他只是被绑定到了这个变量上（其实是一个常量）</p> <p>思考： 如果 bar.js 导出的是一个对象，那么 main.js 中是否可以修改对象中的属性呢？</p> <ul><li>答案是可以的，因为他们指向同一块内存空间。</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">export</span> 导出的不是一个对象，导出这个值是变量的引用，可以跟CJS的exports做对比，设置一两秒后的打印,在import处修改的话，也就是反过来，就会报语法错误，如果是对象的话那就没问题，因为是对象的引用赋值
+</code></pre></div><h2 id="node-对-es-module-的支持"><a href="#node-对-es-module-的支持" class="header-anchor">#</a> Node 对 ES Module 的支持</h2> <ul><li><p>在最新的 Current（v14.13.1）中，支持 ES Module，我们需要进行如下操作：</p> <ul><li>方式一：在 package.json 中配置 type:module</li> <li>方式二：文件以.mjs 结尾，表示使用的是 ES Module；</li></ul></li> <li><p>在最新的 LTS 版本（12.19.0）中，我们也是可以正常运行的，但是会报一个警告。</p></li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 异步使用时，可以在顶级作用域内直接使用 await</span>
+
+<span class="token comment"># 没有了关键字 require，module.exports,exports,__dirname,__filename</span>
+
+<span class="token comment"># 可以使用 import.meta 获取信息</span>
+
+<span class="token comment"># 在 esm 下调用 cjs 的方法： 可以使用 cjs 后缀文件</span>
+
+<span class="token comment"># 翻过来不能使用这种方式在cjs下调用esm的方法</span>
+</code></pre></div><h3 id="commanjs-和-es-module-交互"><a href="#commanjs-和-es-module-交互" class="header-anchor">#</a> CommanJS 和 ES Module 交互</h3> <p>结论一：通常给情况下，CommonJS 不能加载 ES Module</p> <ul><li>因为 CommonJS 是同步加载的，但是 ES Module 必须经过静态分析等，无法在这个时候执行 JS 代码</li> <li>但是这个并非绝对的，某些平台在实现的时候可以对代码进行针对性的解析，可能也会支持。</li> <li>Node 当中是不支持的</li></ul> <p>结论二：多数情况下，ES Module 是可以加载 CommonJS 的</p> <ul><li>ES Module 在加载 CommonJS 时，会将其 module.exports 导出的内容作为 default 导出方式来使用；</li> <li>这个也依然需要看具体的实现，比如 webpack 中是支持的，Node 最新的 Current 版本也是支持的</li> <li>但是在最新的 LTS 版本中就不支持；</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Node/base/" class="prev router-link-active">
+        Node.js
+      </a></span> <span class="next"><a href="/Node/base/V8.html">
+        V8
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Node/assets/js/app.7610ec33.js" defer></script><script src="/Node/assets/js/2.b6a62b60.js" defer></script><script src="/Node/assets/js/19.86462bea.js" defer></script>
+  </body>
+</html>

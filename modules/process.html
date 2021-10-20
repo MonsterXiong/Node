@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>process | Node Note</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/Node/assets/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="Node Note">
+    
+    <link rel="preload" href="/Node/assets/css/0.styles.271287b7.css" as="style"><link rel="preload" href="/Node/assets/js/app.7610ec33.js" as="script"><link rel="preload" href="/Node/assets/js/2.b6a62b60.js" as="script"><link rel="preload" href="/Node/assets/js/31.ebd9806d.js" as="script"><link rel="prefetch" href="/Node/assets/js/10.d6d5e694.js"><link rel="prefetch" href="/Node/assets/js/11.62c9ee39.js"><link rel="prefetch" href="/Node/assets/js/12.913a2399.js"><link rel="prefetch" href="/Node/assets/js/13.e14a2a24.js"><link rel="prefetch" href="/Node/assets/js/14.8d03f2f6.js"><link rel="prefetch" href="/Node/assets/js/15.09afaa40.js"><link rel="prefetch" href="/Node/assets/js/16.144329bc.js"><link rel="prefetch" href="/Node/assets/js/17.451bf273.js"><link rel="prefetch" href="/Node/assets/js/18.50d174db.js"><link rel="prefetch" href="/Node/assets/js/19.86462bea.js"><link rel="prefetch" href="/Node/assets/js/20.749d3a5f.js"><link rel="prefetch" href="/Node/assets/js/21.666325de.js"><link rel="prefetch" href="/Node/assets/js/22.3fc3dc2e.js"><link rel="prefetch" href="/Node/assets/js/23.48f01235.js"><link rel="prefetch" href="/Node/assets/js/24.03e127ea.js"><link rel="prefetch" href="/Node/assets/js/25.5780fa83.js"><link rel="prefetch" href="/Node/assets/js/26.80824d42.js"><link rel="prefetch" href="/Node/assets/js/27.8f3d6d79.js"><link rel="prefetch" href="/Node/assets/js/28.ae79e648.js"><link rel="prefetch" href="/Node/assets/js/29.bd46e497.js"><link rel="prefetch" href="/Node/assets/js/3.13c439d3.js"><link rel="prefetch" href="/Node/assets/js/30.2c681567.js"><link rel="prefetch" href="/Node/assets/js/32.c42210d5.js"><link rel="prefetch" href="/Node/assets/js/33.88580e82.js"><link rel="prefetch" href="/Node/assets/js/4.068c0638.js"><link rel="prefetch" href="/Node/assets/js/5.2183ad7c.js"><link rel="prefetch" href="/Node/assets/js/6.c9e328b2.js"><link rel="prefetch" href="/Node/assets/js/7.5c8491f1.js"><link rel="prefetch" href="/Node/assets/js/8.2032dafa.js"><link rel="prefetch" href="/Node/assets/js/9.d976b2b9.js">
+    <link rel="stylesheet" href="/Node/assets/css/0.styles.271287b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Node/" class="home-link router-link-active"><!----> <span class="site-name">Node Note</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Node/base/" class="nav-link">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link router-link-active">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" class="nav-link">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Node/base/" class="nav-link">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link router-link-active">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" class="nav-link">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Node/modules/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Node/modules/path.html" class="sidebar-link">路径</a></li><li><a href="/Node/modules/process.html" aria-current="page" class="active sidebar-link">进程</a></li><li><a href="/Node/modules/fs.html" class="sidebar-link">文件系统</a></li><li><a href="/Node/modules/http.html" class="sidebar-link">网络http</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="process"><a href="#process" class="header-anchor">#</a> process</h1> <p>进程</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Node/modules/path.html" class="prev">
+        路径
+      </a></span> <span class="next"><a href="/Node/modules/fs.html">
+        文件系统
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Node/assets/js/app.7610ec33.js" defer></script><script src="/Node/assets/js/2.b6a62b60.js" defer></script><script src="/Node/assets/js/31.ebd9806d.js" defer></script>
+  </body>
+</html>

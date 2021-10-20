@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nest | Node Note</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/Node/assets/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="Node Note">
+    
+    <link rel="preload" href="/Node/assets/css/0.styles.271287b7.css" as="style"><link rel="preload" href="/Node/assets/js/app.7610ec33.js" as="script"><link rel="preload" href="/Node/assets/js/2.b6a62b60.js" as="script"><link rel="preload" href="/Node/assets/js/32.c42210d5.js" as="script"><link rel="prefetch" href="/Node/assets/js/10.d6d5e694.js"><link rel="prefetch" href="/Node/assets/js/11.62c9ee39.js"><link rel="prefetch" href="/Node/assets/js/12.913a2399.js"><link rel="prefetch" href="/Node/assets/js/13.e14a2a24.js"><link rel="prefetch" href="/Node/assets/js/14.8d03f2f6.js"><link rel="prefetch" href="/Node/assets/js/15.09afaa40.js"><link rel="prefetch" href="/Node/assets/js/16.144329bc.js"><link rel="prefetch" href="/Node/assets/js/17.451bf273.js"><link rel="prefetch" href="/Node/assets/js/18.50d174db.js"><link rel="prefetch" href="/Node/assets/js/19.86462bea.js"><link rel="prefetch" href="/Node/assets/js/20.749d3a5f.js"><link rel="prefetch" href="/Node/assets/js/21.666325de.js"><link rel="prefetch" href="/Node/assets/js/22.3fc3dc2e.js"><link rel="prefetch" href="/Node/assets/js/23.48f01235.js"><link rel="prefetch" href="/Node/assets/js/24.03e127ea.js"><link rel="prefetch" href="/Node/assets/js/25.5780fa83.js"><link rel="prefetch" href="/Node/assets/js/26.80824d42.js"><link rel="prefetch" href="/Node/assets/js/27.8f3d6d79.js"><link rel="prefetch" href="/Node/assets/js/28.ae79e648.js"><link rel="prefetch" href="/Node/assets/js/29.bd46e497.js"><link rel="prefetch" href="/Node/assets/js/3.13c439d3.js"><link rel="prefetch" href="/Node/assets/js/30.2c681567.js"><link rel="prefetch" href="/Node/assets/js/31.ebd9806d.js"><link rel="prefetch" href="/Node/assets/js/33.88580e82.js"><link rel="prefetch" href="/Node/assets/js/4.068c0638.js"><link rel="prefetch" href="/Node/assets/js/5.2183ad7c.js"><link rel="prefetch" href="/Node/assets/js/6.c9e328b2.js"><link rel="prefetch" href="/Node/assets/js/7.5c8491f1.js"><link rel="prefetch" href="/Node/assets/js/8.2032dafa.js"><link rel="prefetch" href="/Node/assets/js/9.d976b2b9.js">
+    <link rel="stylesheet" href="/Node/assets/css/0.styles.271287b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Node/" class="home-link router-link-active"><!----> <span class="site-name">Node Note</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Node/base/" class="nav-link">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Node/base/" class="nav-link">
+  🏃 基础
+</a></div><div class="nav-item"><a href="/Node/modules/" class="nav-link">
+  🚗 内置模块
+</a></div><div class="nav-item"><a href="/Node/advance/" class="nav-link">
+  🚄 进阶
+</a></div><div class="nav-item"><a href="/Node/koa2/" class="nav-link">
+  🚀 Koa2解密
+</a></div><div class="nav-item"><a href="/Node/express/" class="nav-link">
+  🛫 Express
+</a></div><div class="nav-item"><a href="/Node/nest/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Nest
+</a></div><div class="nav-item"><a href="/Node/egg/" class="nav-link">
+  Egg
+</a></div><div class="nav-item"><a href="/Node/other/" class="nav-link">
+  🚢 其它
+</a></div><div class="nav-item"><a href="https://github.com/MonsterXiong/Node" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  😘 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Node/nest/" aria-current="page" class="active sidebar-link">简介</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/nest/#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/Node/nest/#使用-cli-创建-controller" class="sidebar-link">使用 CLi 创建 controller</a></li><li class="sidebar-sub-header"><a href="/Node/nest/#使用-cli-创建-service" class="sidebar-link">使用 CLi 创建 service</a></li><li class="sidebar-sub-header"><a href="/Node/nest/#调整目录结构" class="sidebar-link">调整目录结构</a></li><li class="sidebar-sub-header"><a href="/Node/nest/#控制器" class="sidebar-link">控制器</a></li><li class="sidebar-sub-header"><a href="/Node/nest/#集成-swagger-api-文档" class="sidebar-link">集成 swagger api 文档</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/nest/#细化-swagger" class="sidebar-link">细化 swagger</a></li></ul></li><li class="sidebar-sub-header"><a href="/Node/nest/#自定义-logger-中间件" class="sidebar-link">自定义 logger 中间件</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nest"><a href="#nest" class="header-anchor">#</a> Nest</h1> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 安装</span>
+npm i <span class="token operator">-</span>g @nestjs<span class="token operator">/</span>cli
+<span class="token comment">// 创建项目</span>
+nest <span class="token keyword">new</span> <span class="token class-name">project</span><span class="token operator">-</span>name
+<span class="token comment">// 启动项目</span>
+cd project<span class="token operator">-</span>name <span class="token operator">&amp;&amp;</span> npm run start
+</code></pre></div><h2 id="使用-cli-创建-controller"><a href="#使用-cli-创建-controller" class="header-anchor">#</a> 使用 CLi 创建 controller</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>nest g controller controller<span class="token operator">-</span>name
+</code></pre></div><h2 id="使用-cli-创建-service"><a href="#使用-cli-创建-service" class="header-anchor">#</a> 使用 CLi 创建 service</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>nest g service service<span class="token operator">-</span>name
+</code></pre></div><h2 id="调整目录结构"><a href="#调整目录结构" class="header-anchor">#</a> 调整目录结构</h2> <div class="language- extra-class"><pre class="language-text"><code>@nestjs/common =&gt;Module,Controller, Get, Query, Post, Body, Patch, Param, Delete,Injectable
+</code></pre></div><h2 id="控制器"><a href="#控制器" class="header-anchor">#</a> 控制器</h2> <p><strong>控制器负责处理传入的请求和向客户端返回响应。</strong></p> <p>控制器的目的是接收应用的特定请求。路由机制控制哪个控制器接收哪些请求。通常，每个控制器有多个路由，不同的路由可以执行不同的操作。</p> <p>为了创建一个基本的控制器，我们使用类和装饰器。装饰器将类和所需元数据相关联，并使 Nest 能够创建路由映射（将请求绑定到想相应的控制器）。</p> <ol><li>创建 cats 文件夹并创建 cats.controller.ts 文件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>import {Controller,Get} from '@nestjs/common'
+
+//使用控制器所需的@Controller()装饰器，可选前缀设置为cats。在@Controller()装饰器中使用路径前缀可以使我们轻松地对一组相关的路由进行分组，并最大程度地减少重复代码，减少每个路由重复路径的那部分。
+@Controller('cats')
+export class CatsController {
+	@Get()
+	findAll():string{
+		return &quot;this action returns all cats&quot;
+	}
+}
+
+使用CLI创建控制器，只需执行nest g controller cats命令
+
+findAll()方法之前的@Get()HTTP请求方法装饰器告诉Nest为HTTP请求的特定端点创建处理程序.端点对应于HTTP请求方法（GET）和路由。什么是路由 ？ 处理程序的路由是通过连接为控制器声明的（可选）前缀和请求装饰器中指定的任何路由来确定的。路由包括可选的控制器路由前缀和请求方法装饰器中声明的任何路由
+</code></pre></div><h2 id="集成-swagger-api-文档"><a href="#集成-swagger-api-文档" class="header-anchor">#</a> 集成 swagger api 文档</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token number">1.</span>npm i <span class="token operator">--</span>save @nestjs<span class="token operator">/</span>swagger swagger<span class="token operator">-</span>ui<span class="token operator">-</span>express
+<span class="token number">2.</span>在main<span class="token punctuation">.</span>ts文件，导入 <span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentBuilder<span class="token punctuation">,</span> SwaggerModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nestjs/swagger'</span>
+<span class="token number">3.</span>在main<span class="token punctuation">.</span>ts文件，监听端口之前，设置swagger文档相关配置
+<span class="token keyword">const</span> swaggerOptions <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DocumentBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">'nest-starter api document'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">setDescription</span><span class="token punctuation">(</span><span class="token string">'nest starter project api document'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">setVersion</span><span class="token punctuation">(</span><span class="token string">'1.0'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">addBasicAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> document <span class="token operator">=</span> SwaggerModule<span class="token punctuation">.</span><span class="token function">createDocument</span><span class="token punctuation">(</span>app<span class="token punctuation">,</span> swaggerOptions<span class="token punctuation">)</span>
+  SwaggerModule<span class="token punctuation">.</span><span class="token function">setup</span><span class="token punctuation">(</span><span class="token string">'doc'</span><span class="token punctuation">,</span> app<span class="token punctuation">,</span> document<span class="token punctuation">)</span> <span class="token comment">// =&gt;'doc'为访问路径</span>
+
+ <span class="token number">4.</span>npm run start <span class="token operator">&amp;&amp;</span> 访问localhost<span class="token operator">:</span><span class="token number">300</span><span class="token operator">/</span>doc
+</code></pre></div><h3 id="细化-swagger"><a href="#细化-swagger" class="header-anchor">#</a> 细化 swagger</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token number">1.</span> npm i <span class="token operator">--</span>save <span class="token keyword">class</span><span class="token operator">-</span>validator
+<span class="token number">2.</span> 在hello文件夹下创建classes文件夹以及hello<span class="token punctuation">.</span>ts文件，并写入
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ApiProperty <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nestjs/swagger'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">enum</span> UserRole <span class="token punctuation">{</span>
+  Admin <span class="token operator">=</span> <span class="token string">'Admin'</span><span class="token punctuation">,</span>
+  User <span class="token operator">=</span> <span class="token string">'User'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Hello</span> <span class="token punctuation">{</span>
+  @<span class="token function">ApiProperty</span><span class="token punctuation">(</span><span class="token punctuation">{</span> example<span class="token operator">:</span> <span class="token string">'Kitty'</span><span class="token punctuation">,</span> description<span class="token operator">:</span> <span class="token string">'The name of the Cat'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  name<span class="token operator">:</span> string
+
+  @<span class="token function">ApiProperty</span><span class="token punctuation">(</span><span class="token punctuation">{</span> example<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> description<span class="token operator">:</span> <span class="token string">'The age of Cat'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  age<span class="token operator">:</span> number
+
+  @<span class="token function">ApiProperty</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    example<span class="token operator">:</span> <span class="token string">'Maine Coon'</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">'The breed of the Cat'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  breed<span class="token operator">:</span> string
+
+  @<span class="token function">ApiProperty</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token keyword">enum</span><span class="token operator">:</span> UserRole <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  role<span class="token operator">:</span> UserRole
+<span class="token punctuation">}</span>
+<span class="token number">3.</span> 在hello文件夹下创建dto文件夹以及在该文件夹内新建create<span class="token operator">-</span>hello<span class="token punctuation">.</span>dto<span class="token punctuation">.</span>ts文件并写入
+<span class="token keyword">import</span> <span class="token punctuation">{</span> IsInt<span class="token punctuation">,</span> IsString <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'class-validator'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">CreateCatDto</span> <span class="token punctuation">{</span>
+  @<span class="token function">IsString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  readonly name<span class="token operator">:</span> string<span class="token punctuation">;</span>
+
+  @<span class="token function">IsInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  readonly age<span class="token operator">:</span> number<span class="token punctuation">;</span>
+
+  @<span class="token function">IsString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  readonly breed<span class="token operator">:</span> string
+<span class="token punctuation">}</span>
+<span class="token number">4.</span><span class="token parameter">修改controller</span><span class="token operator">=&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ApiQuery<span class="token punctuation">,</span> ApiResponse<span class="token punctuation">,</span> ApiBearerAuth<span class="token punctuation">,</span> ApiTags<span class="token punctuation">,</span> ApiBody<span class="token punctuation">,</span> ApiParam <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nestjs/swagger'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Hello<span class="token punctuation">,</span> UserRole <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./classes/hello'</span>
+</code></pre></div><h2 id="自定义-logger-中间件"><a href="#自定义-logger-中间件" class="header-anchor">#</a> 自定义 logger 中间件</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>新建loggerMiddleware<span class="token punctuation">.</span>ts文件<span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Injectable<span class="token punctuation">,</span> NestMiddleware <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@nestjs/common&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Request<span class="token punctuation">,</span> Response <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;express&quot;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">LoggerMiddleware</span> <span class="token keyword">implements</span> <span class="token class-name">NestMiddleware</span> <span class="token punctuation">{</span>
+  <span class="token function">use</span><span class="token punctuation">(</span>req<span class="token operator">:</span> Request<span class="token punctuation">,</span> res<span class="token operator">:</span> Response<span class="token punctuation">,</span> <span class="token function-variable function">next</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">)</span><span class="token operator">:</span> any <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> method<span class="token punctuation">,</span> path <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>method<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+在主模块中引用<span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Module<span class="token punctuation">,</span> RequestMethod<span class="token punctuation">,</span> MiddlewareConsumer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@nestjs/common&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> HelloModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./modules/hello/hello.module&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> LoggerMiddleware <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./common/middleware/logger.middleware&quot;</span><span class="token punctuation">;</span>
+@<span class="token function">Module</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>HelloModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span>
+  <span class="token function">configure</span><span class="token punctuation">(</span>consumer<span class="token operator">:</span> MiddlewareConsumer<span class="token punctuation">)</span><span class="token operator">:</span> any <span class="token punctuation">{</span>
+    <span class="token function">consumer</span>
+      <span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>LoggerMiddleware<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">exclude</span><span class="token punctuation">(</span><span class="token punctuation">{</span> path<span class="token operator">:</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span> method<span class="token operator">:</span> RequestMethod<span class="token punctuation">.</span><span class="token constant">POST</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">forRoutes</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/Node/assets/js/app.7610ec33.js" defer></script><script src="/Node/assets/js/2.b6a62b60.js" defer></script><script src="/Node/assets/js/32.c42210d5.js" defer></script>
+  </body>
+</html>
